@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Profile Search</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center pt-5 searchblock">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div id="message"></div>
+                <form id="searchForm" class="card card-sm" method="post">
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <i class="fas fa-search h4 text-body"></i>
+                        </div>
+                        <!-- End of col -->
+                        <div class="col">
+                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search Github Profile" name="searchInput" id="searchInput" autocomplete="off">
+                        </div>
+                        <!-- End of col -->
+                        <div class="col-auto">
+                            <button class="btn btn-lg btn-success" type="submit">Search</button>
+                        </div>
+                        <!-- End of col -->
+                    </div>
+                </form>
+            </div>
+            <!-- End of col -->
+        </div>
+        <div class="profile">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="profile-sidebar">
+                        <div id="profile"></div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="profile-content">
+                        <!-- Cards -->
+                        <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4" id="repos">
+                            <!-- JavaScript used to fill in this OL Tag -->
+                        </ol>
+                    </div>
+                    <!-- Reload the page -->
+                    <footer class="text-center pt-2"><a href="javascript:window.location.reload()">Search Another User</a></footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
